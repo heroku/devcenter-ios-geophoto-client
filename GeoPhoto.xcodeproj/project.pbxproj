@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8429A1D14E1E45F00763DC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1C14E1E45F00763DC7 /* UIKit.framework */; };
+		F8429A1F14E1E45F00763DC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1E14E1E45F00763DC7 /* Foundation.framework */; };
+		F8429A2114E1E45F00763DC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */; };
+		F8429A2714E1E45F00763DC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8429A2514E1E45F00763DC7 /* InfoPlist.strings */; };
+		F8429A2914E1E45F00763DC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A2814E1E45F00763DC7 /* main.m */; };
+		F8429A2D14E1E45F00763DC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A2C14E1E45F00763DC7 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F8429A1814E1E45F00763DC7 /* GeoPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8429A1C14E1E45F00763DC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F8429A1E14E1E45F00763DC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F8429A2414E1E45F00763DC7 /* GeoPhoto-Info.plist */ = {isa = PBXFileReference; path = "GeoPhoto-Info.plist"; sourceTree = "<group>"; };
+		F8429A2614E1E45F00763DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F8429A2814E1E45F00763DC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F8429A2A14E1E45F00763DC7 /* GeoPhoto-Prefix.pch */ = {isa = PBXFileReference; path = "GeoPhoto-Prefix.pch"; sourceTree = "<group>"; };
+		F8429A2B14E1E45F00763DC7 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8429A2C14E1E45F00763DC7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8429A1514E1E45F00763DC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8429A1D14E1E45F00763DC7 /* UIKit.framework in Frameworks */,
+				F8429A1F14E1E45F00763DC7 /* Foundation.framework in Frameworks */,
+				F8429A2114E1E45F00763DC7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8429A0D14E1E45F00763DC7 = {
+			isa = PBXGroup;
+			children = (
+				F8429A2214E1E45F00763DC7 /* GeoPhoto */,
+				F8429A1B14E1E45F00763DC7 /* Frameworks */,
+				F8429A1914E1E45F00763DC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8429A1914E1E45F00763DC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A1814E1E45F00763DC7 /* GeoPhoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8429A1B14E1E45F00763DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A1C14E1E45F00763DC7 /* UIKit.framework */,
+				F8429A1E14E1E45F00763DC7 /* Foundation.framework */,
+				F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8429A2214E1E45F00763DC7 /* GeoPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A2B14E1E45F00763DC7 /* AppDelegate.h */,
+				F8429A2C14E1E45F00763DC7 /* AppDelegate.m */,
+				F8429A2314E1E45F00763DC7 /* Supporting Files */,
+			);
+			path = GeoPhoto;
+			sourceTree = "<group>";
+		};
+		F8429A2314E1E45F00763DC7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A2414E1E45F00763DC7 /* GeoPhoto-Info.plist */,
+				F8429A2514E1E45F00763DC7 /* InfoPlist.strings */,
+				F8429A2814E1E45F00763DC7 /* main.m */,
+				F8429A2A14E1E45F00763DC7 /* GeoPhoto-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8429A1714E1E45F00763DC7 /* GeoPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8429A3014E1E45F00763DC7 /* Build configuration list for PBXNativeTarget "GeoPhoto" */;
+			buildPhases = (
+				F8429A1414E1E45F00763DC7 /* Sources */,
+				F8429A1514E1E45F00763DC7 /* Frameworks */,
+				F8429A1614E1E45F00763DC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoPhoto;
+			productName = GeoPhoto;
+			productReference = F8429A1814E1E45F00763DC7 /* GeoPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8429A0F14E1E45F00763DC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Heroku;
+			};
+			buildConfigurationList = F8429A1214E1E45F00763DC7 /* Build configuration list for PBXProject "GeoPhoto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F8429A0D14E1E45F00763DC7;
+			productRefGroup = F8429A1914E1E45F00763DC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8429A1714E1E45F00763DC7 /* GeoPhoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8429A1614E1E45F00763DC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8429A2714E1E45F00763DC7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8429A1414E1E45F00763DC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8429A2914E1E45F00763DC7 /* main.m in Sources */,
+				F8429A2D14E1E45F00763DC7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F8429A2514E1E45F00763DC7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8429A2614E1E45F00763DC7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8429A2E14E1E45F00763DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F8429A2F14E1E45F00763DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8429A3114E1E45F00763DC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPhoto/GeoPhoto-Prefix.pch";
+				INFOPLIST_FILE = "GeoPhoto/GeoPhoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F8429A3214E1E45F00763DC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GeoPhoto/GeoPhoto-Prefix.pch";
+				INFOPLIST_FILE = "GeoPhoto/GeoPhoto-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8429A1214E1E45F00763DC7 /* Build configuration list for PBXProject "GeoPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8429A2E14E1E45F00763DC7 /* Debug */,
+				F8429A2F14E1E45F00763DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8429A3014E1E45F00763DC7 /* Build configuration list for PBXNativeTarget "GeoPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8429A3114E1E45F00763DC7 /* Debug */,
+				F8429A3214E1E45F00763DC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8429A0F14E1E45F00763DC7 /* Project object */;
+}
