@@ -7,25 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B99E51E95AB3400590A00FCD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639ADDEE32AE4AFEA8489565 /* libPods.a */; };
+		F82983B414E5D8EF00FAAB2E /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */; };
 		F8429A1D14E1E45F00763DC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1C14E1E45F00763DC7 /* UIKit.framework */; };
 		F8429A1F14E1E45F00763DC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1E14E1E45F00763DC7 /* Foundation.framework */; };
 		F8429A2114E1E45F00763DC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */; };
 		F8429A2714E1E45F00763DC7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8429A2514E1E45F00763DC7 /* InfoPlist.strings */; };
 		F8429A2914E1E45F00763DC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A2814E1E45F00763DC7 /* main.m */; };
 		F8429A2D14E1E45F00763DC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A2C14E1E45F00763DC7 /* AppDelegate.m */; };
+		F8429A3C14E1E52B00763DC7 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A3B14E1E52B00763DC7 /* PhotosViewController.m */; };
+		F8429A4114E1E5FE00763DC7 /* GeoPhotoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A4014E1E5FE00763DC7 /* GeoPhotoAPIClient.m */; };
+		F8429A4414E1E61C00763DC7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A4314E1E61C00763DC7 /* Photo.m */; };
+		F8429A4714E1E67900763DC7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A4614E1E67900763DC7 /* MapKit.framework */; };
+		F8429A4914E1E68000763DC7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A4814E1E68000763DC7 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		639ADDEE32AE4AFEA8489565 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E54CEF1B544E1A82331D55 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F82983B214E5D8EF00FAAB2E /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailViewController.h; path = Controllers/PhotoDetailViewController.h; sourceTree = "<group>"; };
+		F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailViewController.m; path = Controllers/PhotoDetailViewController.m; sourceTree = "<group>"; };
 		F8429A1814E1E45F00763DC7 /* GeoPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8429A1C14E1E45F00763DC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8429A1E14E1E45F00763DC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F8429A2414E1E45F00763DC7 /* GeoPhoto-Info.plist */ = {isa = PBXFileReference; path = "GeoPhoto-Info.plist"; sourceTree = "<group>"; };
+		F8429A2414E1E45F00763DC7 /* GeoPhoto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoPhoto-Info.plist"; sourceTree = "<group>"; };
 		F8429A2614E1E45F00763DC7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F8429A2814E1E45F00763DC7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F8429A2A14E1E45F00763DC7 /* GeoPhoto-Prefix.pch */ = {isa = PBXFileReference; path = "GeoPhoto-Prefix.pch"; sourceTree = "<group>"; };
-		F8429A2B14E1E45F00763DC7 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F8429A2A14E1E45F00763DC7 /* GeoPhoto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeoPhoto-Prefix.pch"; sourceTree = "<group>"; };
+		F8429A2B14E1E45F00763DC7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8429A2C14E1E45F00763DC7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F8429A3A14E1E52B00763DC7 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotosViewController.h; path = Controllers/PhotosViewController.h; sourceTree = "<group>"; };
+		F8429A3B14E1E52B00763DC7 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotosViewController.m; path = Controllers/PhotosViewController.m; sourceTree = "<group>"; };
+		F8429A3F14E1E5FE00763DC7 /* GeoPhotoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPhotoAPIClient.h; sourceTree = "<group>"; };
+		F8429A4014E1E5FE00763DC7 /* GeoPhotoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPhotoAPIClient.m; sourceTree = "<group>"; };
+		F8429A4214E1E61C00763DC7 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Models/Photo.h; sourceTree = "<group>"; };
+		F8429A4314E1E61C00763DC7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Models/Photo.m; sourceTree = "<group>"; };
+		F8429A4614E1E67900763DC7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F8429A4814E1E68000763DC7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +52,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8429A4914E1E68000763DC7 /* CoreLocation.framework in Frameworks */,
+				F8429A4714E1E67900763DC7 /* MapKit.framework in Frameworks */,
 				F8429A1D14E1E45F00763DC7 /* UIKit.framework in Frameworks */,
 				F8429A1F14E1E45F00763DC7 /* Foundation.framework in Frameworks */,
 				F8429A2114E1E45F00763DC7 /* CoreGraphics.framework in Frameworks */,
+				B99E51E95AB3400590A00FCD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +70,7 @@
 				F8429A2214E1E45F00763DC7 /* GeoPhoto */,
 				F8429A1B14E1E45F00763DC7 /* Frameworks */,
 				F8429A1914E1E45F00763DC7 /* Products */,
+				E4E54CEF1B544E1A82331D55 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +85,12 @@
 		F8429A1B14E1E45F00763DC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F8429A4814E1E68000763DC7 /* CoreLocation.framework */,
+				F8429A4614E1E67900763DC7 /* MapKit.framework */,
 				F8429A1C14E1E45F00763DC7 /* UIKit.framework */,
 				F8429A1E14E1E45F00763DC7 /* Foundation.framework */,
 				F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */,
+				639ADDEE32AE4AFEA8489565 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,9 +98,13 @@
 		F8429A2214E1E45F00763DC7 /* GeoPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				F8429A3F14E1E5FE00763DC7 /* GeoPhotoAPIClient.h */,
+				F8429A4014E1E5FE00763DC7 /* GeoPhotoAPIClient.m */,
+				F8429A4514E1E62100763DC7 /* Models */,
+				F8429A3E14E1E52E00763DC7 /* Controllers */,
+				F8429A2314E1E45F00763DC7 /* Supporting Files */,
 				F8429A2B14E1E45F00763DC7 /* AppDelegate.h */,
 				F8429A2C14E1E45F00763DC7 /* AppDelegate.m */,
-				F8429A2314E1E45F00763DC7 /* Supporting Files */,
 			);
 			path = GeoPhoto;
 			sourceTree = "<group>";
@@ -90,6 +120,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F8429A3E14E1E52E00763DC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A3A14E1E52B00763DC7 /* PhotosViewController.h */,
+				F8429A3B14E1E52B00763DC7 /* PhotosViewController.m */,
+				F82983B214E5D8EF00FAAB2E /* PhotoDetailViewController.h */,
+				F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F8429A4514E1E62100763DC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8429A4214E1E61C00763DC7 /* Photo.h */,
+				F8429A4314E1E61C00763DC7 /* Photo.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -100,6 +150,7 @@
 				F8429A1414E1E45F00763DC7 /* Sources */,
 				F8429A1514E1E45F00763DC7 /* Frameworks */,
 				F8429A1614E1E45F00763DC7 /* Resources */,
+				A8AD69CA22184B4295C77A2A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +198,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A8AD69CA22184B4295C77A2A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8429A1414E1E45F00763DC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -154,6 +222,10 @@
 			files = (
 				F8429A2914E1E45F00763DC7 /* main.m in Sources */,
 				F8429A2D14E1E45F00763DC7 /* AppDelegate.m in Sources */,
+				F8429A3C14E1E52B00763DC7 /* PhotosViewController.m in Sources */,
+				F8429A4114E1E5FE00763DC7 /* GeoPhotoAPIClient.m in Sources */,
+				F8429A4414E1E61C00763DC7 /* Photo.m in Sources */,
+				F82983B414E5D8EF00FAAB2E /* PhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,22 +288,30 @@
 		};
 		F8429A3114E1E45F00763DC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E54CEF1B544E1A82331D55 /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoPhoto/GeoPhoto-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GeoPhoto/GeoPhoto-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		F8429A3214E1E45F00763DC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E54CEF1B544E1A82331D55 /* Pods.xcconfig */;
 			buildSettings = {
+				DSTROOT = /tmp/xcodeproj.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GeoPhoto/GeoPhoto-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "GeoPhoto/GeoPhoto-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -255,6 +335,7 @@
 				F8429A3214E1E45F00763DC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
