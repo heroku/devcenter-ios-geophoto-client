@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B99E51E95AB3400590A00FCD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 639ADDEE32AE4AFEA8489565 /* libPods.a */; };
-		F82983B414E5D8EF00FAAB2E /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */; };
 		F8429A1D14E1E45F00763DC7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1C14E1E45F00763DC7 /* UIKit.framework */; };
 		F8429A1F14E1E45F00763DC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A1E14E1E45F00763DC7 /* Foundation.framework */; };
 		F8429A2114E1E45F00763DC7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A2014E1E45F00763DC7 /* CoreGraphics.framework */; };
@@ -20,13 +19,13 @@
 		F8429A4414E1E61C00763DC7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F8429A4314E1E61C00763DC7 /* Photo.m */; };
 		F8429A4714E1E67900763DC7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A4614E1E67900763DC7 /* MapKit.framework */; };
 		F8429A4914E1E68000763DC7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8429A4814E1E68000763DC7 /* CoreLocation.framework */; };
+		F8FA9573150FE02B00ED4EAD /* photo-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA9571150FE02B00ED4EAD /* photo-placeholder.png */; };
+		F8FA9574150FE02B00ED4EAD /* photo-placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FA9572150FE02B00ED4EAD /* photo-placeholder@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		639ADDEE32AE4AFEA8489565 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E54CEF1B544E1A82331D55 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		F82983B214E5D8EF00FAAB2E /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailViewController.h; path = Controllers/PhotoDetailViewController.h; sourceTree = "<group>"; };
-		F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailViewController.m; path = Controllers/PhotoDetailViewController.m; sourceTree = "<group>"; };
 		F8429A1814E1E45F00763DC7 /* GeoPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8429A1C14E1E45F00763DC7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F8429A1E14E1E45F00763DC7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,6 +44,8 @@
 		F8429A4314E1E61C00763DC7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Models/Photo.m; sourceTree = "<group>"; };
 		F8429A4614E1E67900763DC7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F8429A4814E1E68000763DC7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F8FA9571150FE02B00ED4EAD /* photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-placeholder.png"; sourceTree = "<group>"; };
+		F8FA9572150FE02B00ED4EAD /* photo-placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-placeholder@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 				F8429A4514E1E62100763DC7 /* Models */,
 				F8429A3E14E1E52E00763DC7 /* Controllers */,
 				F8429A2314E1E45F00763DC7 /* Supporting Files */,
+				F8FA9570150FE02B00ED4EAD /* Images */,
 				F8429A2B14E1E45F00763DC7 /* AppDelegate.h */,
 				F8429A2C14E1E45F00763DC7 /* AppDelegate.m */,
 			);
@@ -125,8 +127,6 @@
 			children = (
 				F8429A3A14E1E52B00763DC7 /* PhotosViewController.h */,
 				F8429A3B14E1E52B00763DC7 /* PhotosViewController.m */,
-				F82983B214E5D8EF00FAAB2E /* PhotoDetailViewController.h */,
-				F82983B314E5D8EF00FAAB2E /* PhotoDetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -138,6 +138,15 @@
 				F8429A4314E1E61C00763DC7 /* Photo.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F8FA9570150FE02B00ED4EAD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA9571150FE02B00ED4EAD /* photo-placeholder.png */,
+				F8FA9572150FE02B00ED4EAD /* photo-placeholder@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8429A2714E1E45F00763DC7 /* InfoPlist.strings in Resources */,
+				F8FA9573150FE02B00ED4EAD /* photo-placeholder.png in Resources */,
+				F8FA9574150FE02B00ED4EAD /* photo-placeholder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +236,6 @@
 				F8429A3C14E1E52B00763DC7 /* PhotosViewController.m in Sources */,
 				F8429A4114E1E5FE00763DC7 /* GeoPhotoAPIClient.m in Sources */,
 				F8429A4414E1E61C00763DC7 /* Photo.m in Sources */,
-				F82983B414E5D8EF00FAAB2E /* PhotoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

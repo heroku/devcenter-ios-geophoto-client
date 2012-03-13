@@ -1,38 +1,26 @@
 #import "PhotosViewController.h"
-#import "PhotoDetailViewController.h"
 
 #import "Photo.h"
+
+#import "AFJSONRequestOperation.h"
+#import "AFImageRequestOperation.h"
 
 static CLLocationDistance const kMapRegionSpanDistance = 5000;
 
 @interface PhotosViewController ()
 @property (strong, nonatomic, readwrite) CLLocationManager *locationManager;
-@property (strong, nonatomic, readwrite) NSSet *photos;
 @property (strong, nonatomic, readwrite) MKMapView *mapView;
 @property (strong, nonatomic, readwrite) UIActivityIndicatorView *activityIndicatorView;
 @end
 
 @implementation PhotosViewController
 @synthesize locationManager = _locationManager;
-@synthesize photos = _photos;
 @synthesize mapView = _mapView;
 @synthesize activityIndicatorView = _activityIndicatorView;
 
 - (void)dealloc {    
     [_locationManager release];
-    [_photos release];
     [super dealloc];
-}
-
-- (void)setPhotos:(NSSet *)photos {
-    [self willChangeValueForKey:@"photos"];
-    [_photos autorelease];
-    _photos = [photos retain];
-    [self didChangeValueForKey:@"photos"];
-    
-    if ([self isViewLoaded]) {
-        [self.mapView addAnnotations:[self.photos allObjects]];
-    }
 }
 
 #pragma mark - UIViewController
@@ -57,46 +45,45 @@ static CLLocationDistance const kMapRegionSpanDistance = 5000;
     self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:self.activityIndicatorView] autorelease];
     self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(takePhoto:)] autorelease];
     
+    NSURL *url = [NSURL URLWithString:@"http://localhost:5000/photos.json"];
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:[NSURLRequest requestWithURL:url] success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        for (NSDictionary *attributes in [JSON valueForKeyPath:@"photos"]) {
+            Photo *photo = [[[Photo alloc] initWithAttributes:attributes] autorelease];
+            [self.mapView addAnnotation:photo];
+        }
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"Error: %@", error);
+    }];
+    
     self.locationManager = [[[CLLocationManager alloc] init] autorelease];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     self.locationManager.distanceFilter = 80.0f;
     self.locationManager.purpose = NSLocalizedString(@"GeoPhoto uses your location to find nearby photos", nil);
+    [self.locationManager startUpdatingLocation];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    _mapView = nil;
-    _activityIndicatorView = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.locationManager startUpdatingLocation];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
     
     [self.locationManager stopUpdatingLocation];
+    
+    _mapView = nil;
+    _activityIndicatorView = nil;
 }
 
 #pragma mark - Actions
 
 - (void)takePhoto:(id)sender {
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    
     UIImagePickerController *imagePickerController = [[[UIImagePickerController alloc] init] autorelease];
     imagePickerController.delegate = self;
-    imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    imagePickerController.sourceType = sourceType;
     [self.navigationController presentViewController:imagePickerController animated:YES completion:nil];
-}
-
-- (void)viewCurrentPhoto:(id)sender {
-    Photo *photo = [[self.mapView selectedAnnotations] lastObject];
-    PhotoDetailViewController *viewController = [[[PhotoDetailViewController alloc] initWithPhoto:photo] autorelease];
-    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
-    viewController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissModalViewControllerAnimated:)] autorelease];
-    [self presentModalViewController:navigationController animated:YES];
 }
 
 #pragma mark - CLLocationMaangerDelegate
@@ -111,7 +98,7 @@ static CLLocationDistance const kMapRegionSpanDistance = 5000;
         if (error) {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Nearby Photos Failed", nil) message:[error localizedFailureReason] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil] show];
         } else {
-            self.photos = photos;
+            [self.mapView addAnnotations:[photos allObjects]];
         }
     }];
     
@@ -128,19 +115,20 @@ static CLLocationDistance const kMapRegionSpanDistance = 5000;
     }
     
     static NSString *AnnotationIdentifier = @"Pin";
-    MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
     if (!annotationView) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationIdentifier];
+        annotationView.canShowCallout = YES;
     } else {
         annotationView.annotation = annotation;
     }
     
-    annotationView.canShowCallout = YES;
-    
-    UIButton *detailDisclosureButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [detailDisclosureButton addTarget:self action:@selector(viewCurrentPhoto:) forControlEvents:UIControlEventTouchUpInside];
-    annotationView.rightCalloutAccessoryView = detailDisclosureButton;
-    
+    annotationView.image = [UIImage imageNamed:@"photo-placeholder.png"];
+    AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:[NSURLRequest requestWithURL:[(Photo *)annotation thumbnailImageURL]] success:^(UIImage *image) {
+        annotationView.image = image;
+    }];
+    [[NSOperationQueue mainQueue] addOperation:operation];
+
     return annotationView;
 }
 
@@ -158,7 +146,7 @@ static CLLocationDistance const kMapRegionSpanDistance = 5000;
         if (error) {
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Upload Failed", nil) message:[error localizedFailureReason] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil] show];
         } else {
-            self.photos = [self.photos setByAddingObject:photo];
+            [self.mapView addAnnotation:photo];
         }
     }];
 }

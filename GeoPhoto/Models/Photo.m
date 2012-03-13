@@ -128,7 +128,7 @@ static NSString * NSStringFromDate(NSDate *date) {
         [formData appendPartWithFileData:UIImageJPEGRepresentation(image, kPhotoJPEGQuality) name:@"photo[image]" fileName:@"image.jpg" mimeType:@"image/jpeg"];
     }];
     
-    AFHTTPRequestOperation *operation =[[GeoPhotoAPIClient sharedClient] HTTPRequestOperationWithRequest:mutableURLRequest success:^(AFHTTPRequestOperation *operation, id JSON) {
+    AFHTTPRequestOperation *operation = [[GeoPhotoAPIClient sharedClient] HTTPRequestOperationWithRequest:mutableURLRequest success:^(AFHTTPRequestOperation *operation, id JSON) {
         Photo *photo = [[[Photo alloc] initWithAttributes:[JSON valueForKeyPath:@"photo"]] autorelease];
         
         if (block) {
